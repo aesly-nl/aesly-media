@@ -23,6 +23,6 @@ jobs:
         run: |
           git config user.name "aesly-bot"
           git config user.email "noreply@aesly.nl"
-          git add screenshots
+          git add --sparse screenshots
           git commit -m "Website screenshots voor showreel" || echo "niets te committen"
           git push

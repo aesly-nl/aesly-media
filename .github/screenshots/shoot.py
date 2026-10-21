@@ -18,8 +18,8 @@ with sync_playwright() as p:
                 ctx = br.new_context(viewport=vp, device_scale_factor=dpr, is_mobile=mobile, has_touch=mobile, locale="nl-NL",
                     user_agent=None if not mobile else "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1")
                 pg = ctx.new_page()
-                pg.goto("https://" + s, wait_until="networkidle", timeout=45000)
-                pg.wait_for_timeout(3500); dismiss(pg); pg.wait_for_timeout(800)
+                pg.goto("https://" + s, wait_until="load", timeout=30000)
+                pg.wait_for_timeout(3000); dismiss(pg); pg.wait_for_timeout(800)
                 pg.screenshot(path=f"{out}/{s}_{kind}.jpg", type="jpeg", quality=88)
                 # scroll through page to trigger lazy/reveal animations, then full page (capped)
                 h = pg.evaluate("document.body.scrollHeight")
