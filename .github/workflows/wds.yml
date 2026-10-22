@@ -1,0 +1,22 @@
+name: WDS grab
+on:
+  push:
+    branches: [tmp-wds]
+    paths: [".github/wds/**", ".github/workflows/wds.yml"]
+permissions:
+  contents: write
+jobs:
+  grab:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with: { sparse-checkout: .github }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install playwright && python -m playwright install --with-deps chromium
+      - run: python .github/wds/grab.py 2>&1 | tee grab.log
+      - run: |
+          mkdir -p wds && cp grab.log wds/
+          git config user.name "aesly-bot"; git config user.email "noreply@aesly.nl"
+          git add --sparse wds && git commit -m "wds grab" && git push origin HEAD:tmp-wds
