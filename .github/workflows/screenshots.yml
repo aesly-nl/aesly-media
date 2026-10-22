@@ -3,7 +3,8 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - ".github/screenshots/**"
+      - ".github/screenshots/sites.txt"
+      - ".github/screenshots/shoot.py"
       - ".github/workflows/screenshots.yml"
 permissions:
   contents: write

@@ -1,0 +1,30 @@
+name: Website screenshots extra
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/screenshots/shoot_extra.py"
+      - ".github/workflows/screenshots-extra.yml"
+permissions:
+  contents: write
+jobs:
+  shoot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: .github
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install playwright && python -m playwright install --with-deps chromium
+      - run: python .github/screenshots/shoot_extra.py 2>&1 | tee shoot_extra.log
+      - name: Commit screenshots
+        run: |
+          mkdir -p screenshots && cp shoot_extra.log screenshots/shoot_extra.log
+          git config user.name "aesly-bot"
+          git config user.email "noreply@aesly.nl"
+          git add --sparse screenshots
+          git commit -m "Extra screenshots: floatgym, klimaatbeheerders, mpu-tura" || echo "niets te committen"
+          git pull --rebase origin main || true
+          git push
