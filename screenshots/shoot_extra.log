@@ -1,0 +1,75 @@
+fallback ok floatgym.nl 82658
+fallback ok klimaatbeheerders.nl 127814
+fallback ok mpu-tura.de 120550
+FAIL floatgym.nl desktop https://floatgym.nl Page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://floatgym.nl/", waiting until "domcontentloaded"
+
+FAIL floatgym.nl desktop https://www.floatgym.nl Page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://www.floatgym.nl/", waiting until "domcontentloaded"
+
+FAIL floatgym.nl desktop http://floatgym.nl Page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "http://floatgym.nl/", waiting until "domcontentloaded"
+
+FAIL floatgym.nl mobile https://floatgym.nl Page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://floatgym.nl/", waiting until "domcontentloaded"
+
+FAIL floatgym.nl mobile https://www.floatgym.nl Page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://www.floatgym.nl/", waiting until "domcontentloaded"
+
+FAIL floatgym.nl mobile http://floatgym.nl Page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "http://floatgym.nl/", waiting until "domcontentloaded"
+
+FAIL klimaatbeheerders.nl desktop https://klimaatbeheerders.nl Page.goto: net::ERR_NAME_NOT_RESOLVED at https://klimaatbeheerders.nl/
+Call log:
+  - navigating to "https://klimaatbeheerders.nl/", waiting until "domcontentloaded"
+
+FAIL klimaatbeheerders.nl desktop https://www.klimaatbeheerders.nl Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.klimaatbeheerders.nl/
+Call log:
+  - navigating to "https://www.klimaatbeheerders.nl/", waiting until "domcontentloaded"
+
+FAIL klimaatbeheerders.nl desktop http://klimaatbeheerders.nl Page.goto: net::ERR_NAME_NOT_RESOLVED at http://klimaatbeheerders.nl/
+Call log:
+  - navigating to "http://klimaatbeheerders.nl/", waiting until "domcontentloaded"
+
+FAIL klimaatbeheerders.nl mobile https://klimaatbeheerders.nl Page.goto: net::ERR_NAME_NOT_RESOLVED at https://klimaatbeheerders.nl/
+Call log:
+  - navigating to "https://klimaatbeheerders.nl/", waiting until "domcontentloaded"
+
+FAIL klimaatbeheerders.nl mobile https://www.klimaatbeheerders.nl Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.klimaatbeheerders.nl/
+Call log:
+  - navigating to "https://www.klimaatbeheerders.nl/", waiting until "domcontentloaded"
+
+FAIL klimaatbeheerders.nl mobile http://klimaatbeheerders.nl Page.goto: net::ERR_NAME_NOT_RESOLVED at http://klimaatbeheerders.nl/
+Call log:
+  - navigating to "http://klimaatbeheerders.nl/", waiting until "domcontentloaded"
+
+FAIL mpu-tura.de desktop https://mpu-tura.de Page.goto: net::ERR_NAME_NOT_RESOLVED at https://mpu-tura.de/
+Call log:
+  - navigating to "https://mpu-tura.de/", waiting until "domcontentloaded"
+
+FAIL mpu-tura.de desktop https://www.mpu-tura.de Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.mpu-tura.de/
+Call log:
+  - navigating to "https://www.mpu-tura.de/", waiting until "domcontentloaded"
+
+FAIL mpu-tura.de desktop http://mpu-tura.de Page.goto: net::ERR_NAME_NOT_RESOLVED at http://mpu-tura.de/
+Call log:
+  - navigating to "http://mpu-tura.de/", waiting until "domcontentloaded"
+
+FAIL mpu-tura.de mobile https://mpu-tura.de Page.goto: net::ERR_NAME_NOT_RESOLVED at https://mpu-tura.de/
+Call log:
+  - navigating to "https://mpu-tura.de/", waiting until "domcontentloaded"
+
+FAIL mpu-tura.de mobile https://www.mpu-tura.de Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.mpu-tura.de/
+Call log:
+  - navigating to "https://www.mpu-tura.de/", waiting until "domcontentloaded"
+
+FAIL mpu-tura.de mobile http://mpu-tura.de Page.goto: net::ERR_NAME_NOT_RESOLVED at http://mpu-tura.de/
+Call log:
+  - navigating to "http://mpu-tura.de/", waiting until "domcontentloaded"
+
