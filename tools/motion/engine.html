@@ -106,7 +106,7 @@ bignum(tl,s){
   const k=E('pad',null,sc1,{top:'320px'});pop(tl,E('chip',s.kicker,k),.3);
   const n=E('pad big',s.prefix||'',sc1,{top:'470px',fontSize:(s.size||330)+'px',textAlign:'center'});const num=E('',null,n,{display:'inline'});const suf=E('',s.suffix||'',n,{display:'inline',fontSize:Math.round((s.size||330)*.52)+'px',letterSpacing:'-3px'});
   const o={v:0};const dec=s.dec||0;tl.fromTo(n,{opacity:0,scale:.7},{opacity:1,scale:1,duration:.5,ease:'back.out(1.7)'},.5);
-  tl.to(o,{v:s.value,duration:1.6,ease:'power3.out',onUpdate:()=>{num.textContent=o.v.toFixed(dec).replace('.',',')}},.7);
+  tl.to(o,{v:s.value,duration:1.6,ease:'power3.out',onUpdate:()=>{num.textContent=o.v.toLocaleString('nl-NL',{minimumFractionDigits:dec,maximumFractionDigits:dec})}},.7);
   const lb=E('pad h2',null,sc1,{top:'980px',textAlign:'center'});slam(tl,words(lb,s.label),2.2,.12);
   const sc2=E('scene');sceneOn(tl,sc2,4.9,10.4);
   const h=E('pad h2',s.head,sc2,{top:'300px'});tl.fromTo(h,{opacity:0,y:40},{opacity:1,y:0,duration:.5},5.0);

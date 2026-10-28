@@ -8,7 +8,7 @@ const FPS=30;
  const car=spec.kind==='carousel';
  const ctx=await b.newContext({viewport:{width:1080,height:car?1350:1920},deviceScaleFactor:1});
  const page=await ctx.newPage();
- await page.goto('file://'+__dirname+'/engine.html');
+ await page.goto('file:///tmp/gen/engine.html');
  await page.evaluate(()=>document.fonts.ready);
  if(car){
   for(let i=0;i<spec.slides.length;i++){

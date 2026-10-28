@@ -1,5 +1,5 @@
 import json,shutil,os,sys
-repo='/home/claude/aesly-media';stage='/tmp/gen/stage'
+repo='/home/claude/aesly-media';stage='/tmp/gen/stage3'
 meta=json.load(open('/tmp/gen/meta.json'))
 items=json.load(open(f'{repo}/schedule/items.json'));car=json.load(open(f'{repo}/schedule/carousels.json'))
 have={(i['d'],i.get('t',8)) for i in items}|{(c['d'],c.get('t',16)) for c in car}
