@@ -1,0 +1,30 @@
+name: Lead ads screenshots
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/leadads/shoot.py"
+      - ".github/workflows/leadads.yml"
+permissions:
+  contents: write
+jobs:
+  shoot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: .github
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install playwright && python -m playwright install --with-deps chromium
+      - run: python .github/leadads/shoot.py 2>&1 | tee shoot.log
+      - name: Commit
+        run: |
+          cp shoot.log leadads/sites/shoot.log
+          git config user.name "aesly-bot"
+          git config user.email "noreply@aesly.nl"
+          git add --sparse leadads
+          git commit -m "Lead ads: screenshots en scrollvideo's van 10 sites" || echo "niets"
+          git pull --rebase origin main || true
+          git push
