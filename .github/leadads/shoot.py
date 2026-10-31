@@ -1,7 +1,6 @@
 import os, glob, shutil
 from playwright.sync_api import sync_playwright
-SITES = ["sa-mondhygienist.nl","stressnaarsucces.nl","rijschoolurbanflow.nl","premiumbelts.nl","klimaatbeheerders.nl",
-         "restartfinance.nl","yilmazkledingreparatie.nl","fastfixcleaning.nl","nfcmakers.nl","gooiserookwinkel.nl"]
+SITES = ["klimaatbeheerders.nl","livingin-balance.nl","smaak-vol.nl"]
 out = "leadads/sites"; os.makedirs(out, exist_ok=True); tmp = "/tmp/vid"; os.makedirs(tmp, exist_ok=True)
 ACCEPT = ["Alles accepteren","Alle cookies accepteren","Accepteren","Accepteer","Akkoord","Accept all","Accept","Ik ga akkoord","Toestaan","OK","Sluiten"]
 HIDE = """
@@ -25,7 +24,7 @@ with sync_playwright() as p:
     br = p.chromium.launch(args=["--disable-blink-features=AutomationControlled"])
     for s in SITES:
         for kind, vp, dpr, mob, ua in [("desktop",{"width":1440,"height":900},1.5,False,UA_D),("mobile",{"width":390,"height":844},2.5,True,UA_M)]:
-            for url in ["https://"+s, "https://www."+s]:
+            for url in ["https://"+s, "https://www."+s, "http://"+s, "http://www."+s]:
                 try:
                     ctx = br.new_context(viewport=vp, device_scale_factor=dpr, is_mobile=mob, has_touch=mob, locale="nl-NL", user_agent=ua, ignore_https_errors=True)
                     pg = ctx.new_page(); pg.goto(url, wait_until="domcontentloaded", timeout=60000)
@@ -46,7 +45,7 @@ with sync_playwright() as p:
             vd = f"{tmp}/{s}"; os.makedirs(vd, exist_ok=True)
             ctx = br.new_context(viewport={"width":1280,"height":800}, locale="nl-NL", user_agent=UA_D, ignore_https_errors=True,
                                  record_video_dir=vd, record_video_size={"width":1280,"height":800})
-            pg = ctx.new_page(); pg.goto("https://"+s, wait_until="domcontentloaded", timeout=60000)
+            pg = ctx.new_page(); pg.goto("https://www."+s if s.startswith("klimaat") else "https://"+s, wait_until="domcontentloaded", timeout=60000)
             pg.wait_for_timeout(4500); clean(pg); pg.wait_for_timeout(1200)
             h = min(pg.evaluate("document.body.scrollHeight") - 800, 3200)
             for i in range(0, 220):
