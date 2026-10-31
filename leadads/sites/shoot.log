@@ -1,0 +1,42 @@
+ok sa-mondhygienist.nl desktop https://sa-mondhygienist.nl
+ok sa-mondhygienist.nl mobile https://sa-mondhygienist.nl
+video ok sa-mondhygienist.nl
+ok stressnaarsucces.nl desktop https://stressnaarsucces.nl
+ok stressnaarsucces.nl mobile https://stressnaarsucces.nl
+video ok stressnaarsucces.nl
+ok rijschoolurbanflow.nl desktop https://rijschoolurbanflow.nl
+ok rijschoolurbanflow.nl mobile https://rijschoolurbanflow.nl
+video ok rijschoolurbanflow.nl
+ok premiumbelts.nl desktop https://premiumbelts.nl
+ok premiumbelts.nl mobile https://premiumbelts.nl
+video ok premiumbelts.nl
+FAIL klimaatbeheerders.nl desktop https://klimaatbeheerders.nl Page.goto: net::ERR_NAME_NOT_RESOLVED at https://klimaatbeheerders.nl/
+Call log:
+  - navigating to "https://klimaatbeheerders.nl/", waiting until "domcontentloa
+FAIL klimaatbeheerders.nl desktop https://www.klimaatbeheerders.nl Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.klimaatbeheerders.nl/
+Call log:
+  - navigating to "https://www.klimaatbeheerders.nl/", waiting until "domco
+FAIL klimaatbeheerders.nl mobile https://klimaatbeheerders.nl Page.goto: net::ERR_NAME_NOT_RESOLVED at https://klimaatbeheerders.nl/
+Call log:
+  - navigating to "https://klimaatbeheerders.nl/", waiting until "domcontentloa
+FAIL klimaatbeheerders.nl mobile https://www.klimaatbeheerders.nl Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.klimaatbeheerders.nl/
+Call log:
+  - navigating to "https://www.klimaatbeheerders.nl/", waiting until "domco
+video FAIL klimaatbeheerders.nl Page.goto: net::ERR_NAME_NOT_RESOLVED at https://klimaatbeheerders.nl/
+Call log:
+  - navigating to "https://klimaatbeheerders.nl/", waiting until "domcontentloa
+ok restartfinance.nl desktop https://restartfinance.nl
+ok restartfinance.nl mobile https://restartfinance.nl
+video ok restartfinance.nl
+ok yilmazkledingreparatie.nl desktop https://yilmazkledingreparatie.nl
+ok yilmazkledingreparatie.nl mobile https://yilmazkledingreparatie.nl
+video ok yilmazkledingreparatie.nl
+ok fastfixcleaning.nl desktop https://fastfixcleaning.nl
+ok fastfixcleaning.nl mobile https://fastfixcleaning.nl
+video ok fastfixcleaning.nl
+ok nfcmakers.nl desktop https://nfcmakers.nl
+ok nfcmakers.nl mobile https://nfcmakers.nl
+video ok nfcmakers.nl
+ok gooiserookwinkel.nl desktop https://gooiserookwinkel.nl
+ok gooiserookwinkel.nl mobile https://gooiserookwinkel.nl
+video ok gooiserookwinkel.nl
